@@ -1,7 +1,7 @@
-### Estimated Time
+### Estimated Time Pre Test Quiz
 
 45 minutes
-### Instructions for Pre-Test
+### Instructions for Pre Test Quiz
 
 Pretest includes questions on:
 
