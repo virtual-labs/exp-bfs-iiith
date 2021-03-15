@@ -159,7 +159,7 @@
      },
     {
       "unit-type": "task",
-      "label": "Post Test",
+      "label": "Post Test Quiz",
       "content-type": "assesment",
       "source": "posttest.js",
       "target": "posttest.html"
