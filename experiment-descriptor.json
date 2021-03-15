@@ -156,7 +156,7 @@
           "content-type": "assesment",
           "source": "post-test.md",
           "target": "post-test.html"
-     }
+     },
     {
       "unit-type": "task",
       "label": "Post Test",
