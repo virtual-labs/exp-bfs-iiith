@@ -146,7 +146,7 @@
           "label": "Analysis Quiz",
           "content-type": "assesment",
           "source": "analysis-quiz.js",
-          "target": "analysis-quiz.js"
+          "target": "analysis-quiz.html"
         }
       ]
     },
