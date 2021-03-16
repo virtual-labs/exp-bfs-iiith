@@ -11,7 +11,7 @@
 
 ### BFS Applications
 
-   - Path and Minimum Spanning Tree for unweighted graph.
+   - **Path and Minimum Spanning Tree for unweighted graph**
 
      - In an unweighted graph, the shortest path is the path with least number of edges.
      - With Breadth First Search, we always reach a vertex from given source using the minimum number of edges.
