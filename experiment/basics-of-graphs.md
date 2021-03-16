@@ -5,8 +5,8 @@ Pictorial Representation of Graph
 
 ### Pictorial Representation of Graph
 <img src="images/graph.png"/>
-### Types of Graphs
 
+### Types of Graphs
    - Undirected Graph
    - Directed Graph
 
