@@ -40,6 +40,6 @@ Similar to BFS lets take the same graph for performing DFS operations, and the i
    - The generated output is – A, B, E, G, F, C, D.
 
 ### DFS traversal on the Example graph
-<img src="images/bfs-1.png"/>
+<img src="images/dfs-1.png"/>
 
 
