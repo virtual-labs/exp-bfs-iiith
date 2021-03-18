@@ -153,7 +153,7 @@
     {
           "unit-type": "task",
           "label": "Post Test Quiz Instructions",
-          "content-type": "assesment",
+          "content-type": "video",
           "source": "post-test.md",
           "target": "post-test.html"
      },
