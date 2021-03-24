@@ -34,13 +34,7 @@
       "source": "basics-of-queues.md",
       "target": "basics-of-queues.html"
     },  
-    {
-      "unit-type": "task",
-      "label": "Pre Test Quiz Instructions",
-      "content-type": "video",
-      "source": "pre-test.md",
-      "target": "pre-test.html"
-    },  
+    
     {
       "unit-type": "task",
       "label": "Pre Test Quiz",
@@ -65,35 +59,35 @@
         },
 	{
           "unit-type": "task",
-          "label": "BFS : Concept",
+          "label": "Concept",
           "content-type": "video",
           "source": "bfs-concept.md",
           "target": "bfs-concept.html"
         },
         {
           "unit-type": "task",
-          "label": "BFS : Algorithm",
+          "label": "Algorithm",
           "content-type": "video",
           "source": "bfs-algorithm.md",
           "target": "bfs-algorithm.html"
         },
         {
           "unit-type": "task",
-          "label": "BFS : Demo",
+          "label": "Demo",
           "content-type": "simulation",
           "source": "simulation/bfs_demo.html",
           "target": "bfs_demo.html"
         },
         {
           "unit-type": "task",
-          "label": "BFS : Practice",
+          "label": "Practice",
           "content-type": "simulation",
           "source": "simulation/bfs_practice.html",
           "target": "bfs_practice.html"
         },
 	{
           "unit-type": "task",
-          "label": "BFS : Exercise",
+          "label": "Exercise",
           "content-type": "simulation",
           "source": "simulation/bfs_exercise.html",
           "target": "bfs_exercise.html"
@@ -101,7 +95,7 @@
         
 	{
          "unit-type": "task",
-         "label": "BFS : Quiz",
+         "label": "Quiz",
          "content-type": "assesment",
          "source": "bfs-quiz.js",
          "target": "bfs-quiz.html"
@@ -118,13 +112,7 @@
         {
           "unit-type": "aim"
         },
-	{
-          "unit-type": "task",
-          "label": "Overview",
-          "content-type": "video",
-          "source": "overview.md",
-          "target": "overview.html"
-        },
+	
         {
           "unit-type": "task",
           "label": "Time and Space Complexity of BFS",
@@ -143,7 +131,7 @@
 	
         {
           "unit-type": "task",
-          "label": "Analysis Quiz",
+          "label": "Quiz",
           "content-type": "assesment",
           "source": "analysis-quiz.js",
           "target": "analysis-quiz.html"
