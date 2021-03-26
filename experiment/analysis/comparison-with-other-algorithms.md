@@ -1,6 +1,6 @@
 ### Differences between BFS and DFS
 
-### Key Differences Between BFS and DFS:
+**Key Differences Between BFS and DFS:**
 
    - BFS is vertex-based algorithm while DFS is an edge-based algorithm.
    - Queue data structure is used in BFS. On the other hand, DFS uses stack or recursion.
@@ -19,10 +19,11 @@
    - Now E and F are removed from the queue, and its successor vertex C is traversed and stored in the queue.
    - At last C is also removed and the queue is empty which means we are done.
    - The generated Output is – A, B, D, G, E, F, C.
+   - 
 ### BFS traversal on the Example graph
 <img src="images/bfs.png"/>
-### DFS Traversal
 
+### DFS Traversal
 Similar to BFS lets take the same graph for performing DFS operations, and the involved steps are:
 
    - Considering A as the starting vertex which is explored and stored in the stack. B, the successor vertex of A, is stored in the stack.
@@ -39,6 +40,6 @@ Similar to BFS lets take the same graph for performing DFS operations, and the i
    - The generated output is – A, B, E, G, F, C, D.
 
 ### DFS traversal on the Example graph
-<img src="images/bfs-1.png"/>
+<img src="images/dfs-1.png"/>
 
 
