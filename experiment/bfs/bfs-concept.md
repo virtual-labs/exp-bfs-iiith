@@ -1,8 +1,6 @@
 ### An Introduction to BFS Concept
 <iframe src="https://www.youtube.com/embed/fYXwV7e_vlc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-### Let's see concept of BFS
-<iframe src="https://www.youtube.com/embed/ivW2JAF9-Tw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ### Definition
 

@@ -15,4 +15,12 @@ And above all, a curiosity to learn and explore!
 ### Overview of the Experiment
 
 The experiment features a series of modules with video lectures, hands-on practice exercises and quizzes for self analysis.
+
+### Experiment Modules & their Weightage
+|Module 	|Weightage 	|Expectation|
+|---------------|----------------|----------|
+|Pre-Test 	|15% 		|Solve all questions|
+|BFS 		|35% 		|Understand all operations|
+|Analysis 	|25% 		|Understand the time and space complexity|
+|Post-test 	|25% 		|Solve all questions|
  
