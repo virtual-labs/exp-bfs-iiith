@@ -50,13 +50,7 @@
         {
           "unit-type": "aim"
         },
-        {
-          "unit-type": "task",
-          "label": "Overview",
-          "content-type": "video",
-          "source": "overview.md",
-          "target": "overview.html"
-        },
+        
 	{
           "unit-type": "task",
           "label": "Concept",
@@ -115,7 +109,7 @@
 	
         {
           "unit-type": "task",
-          "label": "Time and Space Complexity of BFS",
+          "label": "Time and Space Complexity ",
           "content-type": "video",
           "source": "time-and-space-complexity-of-bfs.md",
           "target": "time-and-space-complexity-of-bfs.html"
