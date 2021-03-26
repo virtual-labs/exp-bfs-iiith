@@ -106,9 +106,7 @@
         a: "There can be a loop in graph so we must maintain a visited flag for every vertex ",                  ///// Write the option 1 inside double quotes
         b: "DFS of a graph uses stack, but inorder traversal of a tree is recursive",                  ///// Write the option 2 inside double quotes
 	c: "BFS of a graph uses queue, but a time efficient BFS of a tree is recursive.", ///// Write the option 3 inside double quotes
-        d: "All of the above
-
-", ///// Write the option 4 inside double quotes
+        d: "All of the above", ///// Write the option 4 inside double quotes
               },
       correctAnswer: "a"                ///// Write the correct option inside double quotes
     },
