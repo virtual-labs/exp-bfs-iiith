@@ -34,14 +34,6 @@
       "source": "basics-of-queues.md",
       "target": "basics-of-queues.html"
     },  
-    
-    {
-      "unit-type": "task",
-      "label": "Pre Test Quiz",
-      "content-type": "assesment",
-      "source": "pretest.js",
-      "target": "pretest.html"
-    },
     {
       "unit-type": "lu",
       "label": "BFS",
@@ -85,15 +77,7 @@
           "content-type": "simulation",
           "source": "simulation/bfs_exercise.html",
           "target": "bfs_exercise.html"
-        },
-        
-	{
-         "unit-type": "task",
-         "label": "Quiz",
-         "content-type": "assesment",
-         "source": "bfs-quiz.js",
-         "target": "bfs-quiz.html"
-       }
+        }
       
       ]
     },
@@ -121,24 +105,8 @@
           "content-type": "video",
           "source": "comparison-with-other-algorithms.md",
           "target": "comparison-with-other-algorithms.html"
-        },
-	
-        {
-          "unit-type": "task",
-          "label": "Quiz",
-          "content-type": "assesment",
-          "source": "analysis-quiz.js",
-          "target": "analysis-quiz.html"
         }
       ]
-    },
-    
-    {
-      "unit-type": "task",
-      "label": "Post Test Quiz",
-      "content-type": "assesment",
-      "source": "posttest.js",
-      "target": "posttest.html"
     },
        
     {
