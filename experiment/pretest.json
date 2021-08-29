@@ -1,5 +1,4 @@
-{
-    "version": 2.0,
+{    "version": 2.0,
     "questions": [
         {
             "question": "1. Which of the following policies does a queue follow?",
@@ -51,6 +50,24 @@
                 "d": "A complete graph is a graph where all vertices have a direct edge to all other vertices. The given graph does not fit this definition. For example, there is no edge between vertices 1 and 4."
             },
             "difficulty": "intermediate"
+        },
+        {
+            "question": "4. Consider the following undirected graph:<br>Vertices, V = [a, b, c , d, e, f]<br>Edges, E = [[a, b], [a c], [b, d], [b, e], [c, e], [c, f]]<br>Where each array within E signifies an edge between the two mentioned vertices.<br>If we were to store this graph\u2019s vertices in a queue in the order top to bottom(parent to child) and left to right(edges that appear first in the edge matrix appear first in the queue) with \u2018a\u2019 as the root, what index would vertex \u2018e\u2019 be stored at (assume 0 indexing for the queue and no deletions)?",
+            "answers": {
+                "a": "2",
+                "b": "3",
+                "c": "4",
+                "d": "5"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "a": "This answer is probably obtained by an incorrect understanding of the question or concept at hand. It would be easier to answer this question by drawing the graph and storing the elements in the queue while traversing the drawn graph as per the mentioned rules.",
+                "b": "This answer is probably obtained by an incorrect understanding of the question or concept at hand. While \u2018e\u2019 does appear in the 3rd and final layer of the graph if we were to draw the graph, the question asks for its index in the queue as per the traversal rules mentioned above. It would be easier to answer this question by drawing the graph and storing the elements in the queue while traversing the drawn graph as per the mentioned rules.",
+                "c": "The queue turns out to be [a, b, c, d, e, f] as first we store \u2018a\u2019 at index 0 which is the root. Then we add \u2018b\u2019 and \u2018c\u2019 as they form the next layer as children of \u2018a\u2019 from left to right and finally we add \u2018d\u2019, \u2018e\u2019 and \u2018f\u2019 as they form the final layer as children of \u2018b\u2019 and \u2018c\u2019 from left to right.",
+                "d": "This answer is probably obtained by assuming 1 indexing instead of 0 indexing. The queue turns out to be [a, b, c, d, e, f] as first we store \u2018a\u2019 at index 0 which is the root. Then we add \u2018b\u2019 and \u2018c\u2019 as they form the next layer as children of \u2018a\u2019 from left to right and finally we add \u2018d\u2019, \u2018e\u2019 and \u2018f\u2019 as they form the final layer as children of \u2018b\u2019 and \u2018c\u2019 from left to right. Here it is clearly visible that \u2018e\u2019 is stored at the 5th position whose index is given by subtracting 1 from 5 to account for the zero indexing."
+            },
+            "difficulty": "advanced"
         }
     ]
 }
+   
