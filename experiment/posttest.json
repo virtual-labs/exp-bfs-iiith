@@ -34,6 +34,41 @@
                 "d": "There is a significant change in the order of traversal such that the logic of the algorithm itself changes."
             },
             "difficulty": "intermediate"
+        },
+        {
+            "question": "3. Why is the time complexity of BFS O(|V| + |E|)?",
+            "answers": {
+                "a": "Because it considers all vertices and edges in the worst case",
+                "b": "Because it considers all vertices and edges in all cases",
+                "c": "This is not the correct time complexity of BFS",
+                "d": "None of the above"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "a": "This answer is only partially correct. BFS does have the mentioned complexity in the worst case but that is not the complete answer.",
+                "b": "In any traversal algorithm there is a minimum complexity of O(|V|) as we have to visit all vertices at some point. In BFS, as we traverse each vertex, we consider all the vertices connected to the current node by direct edges and indirectly end up traversing all the edges as well.",
+                "c": "This is in fact the correct time complexity for BFS.",
+                "d": "One of the other options correctly specifies the answer."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "4. Consider the following graph:<br>Vertices, V = [a, b, c , d, e, f]<br>Edges, E = [[a, b], [a c], [b, d], [b, e], [c, e], [c, f]]<br>Where each array within E signifies an edge between the two mentioned vertices and a is the root.<br>Which of the following represents the correct sequence of the queue used in BFS to traverse the above graph?",
+            "answers": {
+                "a": "[] \u2192 [a] \u2192 [b, c] \u2192 [b, e, f] \u2192 [b, e] \u2192 [b] \u2192 [d] \u2192 []",
+                "b": "[] \u2192 [a] \u2192 [a, b, c] \u2192 [a, b, c, d, e] \u2192 [a, b, c, d, e, f]",
+                "c": "[] \u2192 [a] \u2192 [b, c] \u2192 [c, d] \u2192 [d, e, f] \u2192 [e, f] \u2192 [f] \u2192 []",
+                "d": "[] \u2192 [a] \u2192 [b, c] \u2192 [c, d, e] \u2192 [d, e, f] \u2192 [e, f] \u2192 [f] \u2192 []"
+            },
+            "correctAnswer": "d",
+            "explanations": {
+                "a": "This option is incorrect as it makes use of stack logic instead of a queue and actually represents the sequence for a DFS.",
+                "b": "This option is incorrect as it fails to pop/remove the nodes once they are traversed and would lead to an infinite loop as the queue would never become empty.",
+                "c": "This sequence is incorrect as it fails to add vertex \u2018e\u2019 to the queue when traversing \u2018b\u2019 itself even though \u2018e\u2019 is a child of \u2018b\u2019.",
+                "d": "This sequence represents the correct order and representation of the queue at each step where we keep traversing (and popping/removing) the node at the front of the queue and add all the unvisited children of that node to the queue. We keep this process going till the queue is empty and the entire graph has been traversed."
+            },
+            "difficulty": "advanced"
         }
     ]
 }
+ 
