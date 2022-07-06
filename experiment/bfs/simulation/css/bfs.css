@@ -71,9 +71,45 @@ br {
   float: right;
   position: relative;
 }
-.legend .skyblue {background-color: aqua}
+.legend .blue {
+  border-radius: 0%;
+  width: 3.2vw;
+  margin-top: 2.8%;
+  height: 0.35vw;
+  border: 0vw solid grey;
+}
+.legend .white {
+  border-radius: 0%;
+  width: 3.0vw;
+  margin-top: 2.8%;
+  height: 0.30vw;
+  border: .1vw solid #a4c652;
+}
+
+.legend .grey {
+  border-radius: 0%;
+  width: 3.2vw;
+  margin-top: 2.8%;
+  height: 0.35vw;
+  border: 0vw solid grey;
+}
+
+.legend .green {
+  border-radius: 0%;
+  width: 3.2vw;
+  margin-top: 2.8%;
+  height: 0.35vw;
+  border: 0vw solid grey;
+}
+.legend .black {
+  border-radius: 0%;
+  width: 3.2vw;
+  margin-top: 2.8%;
+  height: 0.35vw;
+  border: 0vw solid grey;
+}
 .legend .violet{background-color: darkblue}
-.legend .blue{background-color: #2C9AD1}
+
 .legend .grey_edge{    
     background-color: #808080;
     border-radius: 0%;
