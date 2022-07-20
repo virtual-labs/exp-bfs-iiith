@@ -72,6 +72,7 @@ br {
   position: relative;
 }
 .legend .blue {
+  background-color: #2C9AD1;
   border-radius: 0%;
   width: 3.2vw;
   margin-top: 2.8%;
@@ -79,6 +80,7 @@ br {
   border: 0vw solid grey;
 }
 .legend .white {
+  background-color: white;
   border-radius: 0%;
   width: 3.0vw;
   margin-top: 2.8%;
@@ -87,6 +89,7 @@ br {
 }
 
 .legend .grey {
+  background-color: grey;
   border-radius: 0%;
   width: 3.2vw;
   margin-top: 2.8%;
@@ -95,6 +98,7 @@ br {
 }
 
 .legend .green {
+  background-color: #a4c652;
   border-radius: 0%;
   width: 3.2vw;
   margin-top: 2.8%;
@@ -102,6 +106,7 @@ br {
   border: 0vw solid grey;
 }
 .legend .black {
+  background-color: black;
   border-radius: 0%;
   width: 3.2vw;
   margin-top: 2.8%;
@@ -111,7 +116,7 @@ br {
 .legend .violet{background-color: darkblue}
 
 .legend .grey_edge{    
-    background-color: #808080;
+    background-color: grey;
     border-radius: 0%;
     width: 3.2vw;
     margin-top: 2.8%;
@@ -161,3 +166,7 @@ br {
 .slider_input{
   width:10%;
 }
+
+.legend { list-style: none; }
+.legend li { padding-bottom : 1.5vw; width: 20vw; }
+.legend span { border: 0.1vw solid black; float: left; border-radius: 50%;}
