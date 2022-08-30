@@ -26,20 +26,26 @@
     <center>   
       <div id="graph"></div> 
     </center>
-    <div id="legend" >
-        <ul class="legend">
-          <li><span class="blue"></span> : Source Node</li>
-          <li><span class="white"></span> : Unvisited Node</li>
-          <li><span class="grey"></span> : Current Node</li>
-          <li><span class="green"></span> : Traversed Node</li>
-          <li><span class="black"></span> : Explored Node</li>
-        </ul>
+    <div id="legend">
+      <ul class="legend">
+        <table>
+          <tr><td><b>Legend:</b></td></tr>
+          <th> Node</th>
+          <tr><td><span class="blue"></span>&ensp;Source</td></tr>
+          <tr><td><span class="black"></span>&ensp;Explored</td></tr>
+          <tr><td><span class="white"></span>&ensp;Unvisited</td></tr>
+          <tr><td><span class="grey"></span>&ensp;Current</td></tr>
+          <tr><td><span class="green"></span>&ensp;Traversed</td></tr>
+          <th> Edge</th>
+          <tr><td><span class="grey"></span>&ensp;Not added to DFS Path</td></tr>
+          <tr><td><span class="black"></span>&ensp;Added to DFS Path</td></tr>
+        </table>
+      </ul>
     </div>
     <div id="legend_edge" >
-        <ul class="legend">
-          <li><span class="grey_edge"></span> : Edge not added to BFS path </li>
-          <li><span class="black_edge"></span> : Edge added to BFS path </li>
-        </ul>
+      <ul class="legend">
+        <li>&#x200b</li>
+      </ul>
     </div>
     <div id="comments" class="comment-box">
       <b>Observations</b><br>
