@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "experiment name": "Experiment Name",
+    "problems": [
+        {
+            "problem name": "Breadth First Search",
+            "description": "You are given the list of edges of a directed graph and the root node. Perform depth first search to find the correct order of visitation of nodes. You are advised to first construct a graph from the edge list then proceed further.",
+            "inputs": [
+                [[1,2], [2,3], [1,4], [4,5], [4,6]],
+                1
+            ],
+            "expected": [1,2,4,3,5,6],
+            "inputs description": "Input consists of an array of edges -inp1 as [node1, node2]. For node1 as parent, The first of the edges denote the edge with the left child, other latter edge with the right child. The other input is the root node - inp2 ",
+            "expected description": "An array of nodes in the correct order of visitation"
+        }
+    ]
+}

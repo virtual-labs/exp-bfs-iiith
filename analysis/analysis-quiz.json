@@ -1,0 +1,39 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. Consider the following graph:<br>Vertices, V = [a, b, c , d, e, f]<br>Edges, E = [[a, b], [a c], [b, d], [b, e], [c, e], [c, f]]<br>Where each array within E signifies an edge between the two mentioned vertices.<br>How many iterations of the queue would it take for the algorithm to traverse this graph completely?",
+            "answers": {
+                "a": "3",
+                "b": "5",
+                "c": "6",
+                "d": "7"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "a": "This answer is probably obtained by an incorrect understanding of the algorithm. While there are 3 layers in the graph, the queue will contain each element/vertex exactly once during the run and the number of iterations depends on the number of elements the queue takes until it is empty again.",
+                "b": "This answer is probably obtained by miscounting. The queue will contain each element/vertex exactly once during the run and the number of iterations depends on the number of elements the queue takes until it is empty again. There are 6 vertices in the graph.",
+                "c": "The queue will contain each element/vertex exactly once during the run and the number of iterations depends on the number of elements the queue takes until it is empty again. Since there are 6 vertices, we will require 6 iterations.",
+                "d": "This answer is probably obtained by miscounting. The queue will contain each element/vertex exactly once during the run and the number of iterations depends on the number of elements the queue takes until it is empty again. There are 6 vertices in the graph."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "2. When will the space complexity of BFS be greater than DFS? Note that maximum height in the options refers to the longest thread of vertices from the root to a leaf or final non-repeating vertex.",
+            "answers": {
+                "a": "If the maximum height is less than the maximum number of nodes in a single level",
+                "b": "If the maximum height is greater than the maximum number of nodes in a single level",
+                "c": "BFS and DFS have same the space complexity",
+                "d": "Space complexity of DFS is always greater than that of BFS"
+            },
+            "correctAnswer": "a",
+            "explanations": {
+                "a": "In BFS, the space complexity is proportional to the number of nodes in the deepest level (as this level contains maximum number of nodes in a single level usually) as we traverse one level at a time while in DFS the space complexity is proportional to the maximum depth/height of the graph as we traverse one entire branch (starting from the root) at a time.",
+                "b": "In BFS, the space complexity is proportional to the number of nodes in the deepest level (as this level contains maximum number of nodes in a single level usually) as we traverse one level at a time while in DFS the space complexity is proportional to the maximum depth/height of the graph as we traverse one entire branch (starting from the root) at a time. Thus, a maximum height greater than maximum number of nodes in a single level would in fact make the space complexity of DFS greater than that of BFS.",
+                "c": "In BFS, the space complexity is proportional to the number of nodes in the deepest level (as this level contains maximum number of nodes in a single level usually) as we traverse one level at a time while in DFS the space complexity is proportional to the maximum depth/height of the graph as we traverse one entire branch (starting from the root) at a time. These two quantities are not the same and hence DFS and BFS have different space complexities.",
+                "d": "In BFS, the space complexity is proportional to the number of nodes in the deepest level (as this level contains maximum number of nodes in a single level usually) as we traverse one level at a time while in DFS the space complexity is proportional to the maximum depth/height of the graph as we traverse one entire branch (starting from the root) at a time. It is not necessary that the maximum height is always greater than the maximum number of nodes in a single level and hence this option is incorrect."
+            },
+            "difficulty": "intermediate"
+        }
+    ]
+}
