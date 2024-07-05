@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "experiment name": "Experiment Name",
+    "problems": [
+        {
+            "problem name": "Breadth First Search",
+            "description": "You are given the list of edges of a directed graph and the root node. Perform breadth first search to find the correct order of visitation of nodes. You are advised to first construct a graph from the edge list then proceed further.",
+            "inputs": [
+                [[1,2], [2,3], [1,4], [4,5], [4,6]],
+                1
+            ],
+            "expected": [1,2,4,3,5,6],
+            "inputs description": "Input consists of an array of edges -inp1 as [node1, node2]. For node1 as parent, The first of the edges denote the edge with the left child, other latter edge with the right child. The other input is the root node - inp2 ",
+            "expected description": "An array of nodes in the correct order of visitation",
+            "difficulty": "beginner"
+        },
+        {
+            "problem name": "Shortest Path in a Maze",
+            "description": "You find yourself in a maze represented by a grid of cells. Each cell is either passable (0) or blocked by a wall (1). You start at the top-left corner of the maze and must find the shortest path to the bottom-right corner using only horizontal and vertical moves. If there is no valid path, return -1.",
+            "inputs": [
+                [
+                    [0, 1, 0, 0, 0],
+                    [0, 1, 0, 1, 0],
+                    [0, 0, 0, 1, 0],
+                    [0, 1, 1, 1, 0],
+                    [0, 0, 0, 0, 0]
+                ]
+            ],
+            "expected": 9,
+            "inputs description": "A 2D array grid where 0 represents a passable cell and 1 represents an obstacle. The start point is grid[0][0] and the end point is grid[4][4].",
+            "expected description": "An integer representing the length of the shortest path from the top-left corner to the bottom-right corner, or -1 if no such path exists.",
+            "difficulty": "intermediate"
+        }
+
+    ]
+}
