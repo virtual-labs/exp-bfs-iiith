@@ -19,14 +19,14 @@
             "description": "You find yourself in a maze represented by a grid of cells. Each cell is either passable (0) or blocked by a wall (1). You start at the top-left corner of the maze and must find the shortest path to the bottom-right corner using only horizontal and vertical moves. If there is no valid path, return -1.",
             "inputs": [
                 [
-                    [0, 1, 0, 0, 0],
                     [0, 1, 0, 1, 0],
+                    [0, 1, 0, 0, 0],
                     [0, 0, 0, 1, 0],
                     [0, 1, 1, 1, 0],
                     [0, 0, 0, 0, 0]
                 ]
             ],
-            "expected": 9,
+            "expected": 8,
             "inputs description": "A 2D array grid where 0 represents a passable cell and 1 represents an obstacle. The start point is grid[0][0] and the end point is grid[4][4].",
             "expected description": "An integer representing the length of the shortest path from the top-left corner to the bottom-right corner, or -1 if no such path exists.",
             "difficulty": "intermediate"
