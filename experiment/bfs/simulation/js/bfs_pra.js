@@ -37,7 +37,7 @@ bfs_practice.selected_cnt = 0;
 bfs_practice.selected = [];
 bfs_practice.bfsvis = new Array(1000);
 bfs_practice.bfsvis.fill(0);
-document.getElementById("ins").innerHTML = "Execution is reset";}
+document.getElementById("ins").innerHTML = "Execution is reset, select the source node for BFS ";}
 class bfs_class{
     constructor(){
         this.src;
