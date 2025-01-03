@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>BFS Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="docs/static/libs/vis.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bfs.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/common-styles-responsive.css">
+  </head>
+  <body>
+    <div class="instruction-box">
+    <button class="collapsible">Instructions</button>
+      <div class="content">
+        <ul>
+            <li>Click on the graph to enable the border.</li>
+            <li>Click on the node which you want to select as source node of the BFS demo.</li>
+            <li>You can click on <b>Pause</b> or <b>Play</b> to do so respectively and adjust speed using the slider.</li>
+            <li>Click on <b>Next</b> to move a step forward.</li>
+            <li>Click on <b>New Graph</b> to start over with a new graph.</li>
+            <li>Click on <b>Reset</b> to start over with the same graph.</li>
+            <li>Zoom or Adjust graph by dragging nodes according to your convenience.</li>  
+        </ul>
+      </div>
+    </div> 
+    <center>   
+      <div id="graph"></div> 
+    </center>
+    <div id="legend">
+      <ul class="legend">
+        <table>
+          <tr><td><b>Legend:</b></td></tr>
+          <th> Node</th>
+          <tr><td><span class="blue"></span>&ensp;Source</td></tr>
+          <tr><td><span class="black"></span>&ensp;Explored</td></tr>
+          <tr><td><span class="white"></span>&ensp;Unvisited</td></tr>
+          <tr><td><span class="grey"></span>&ensp;Current</td></tr>
+          <tr><td><span class="green"></span>&ensp;Traversed</td></tr>
+          <th> Edge</th>
+          <tr><td><span class="grey"></span>&ensp;Not added to BFS Path</td></tr>
+          <tr><td><span class="black"></span>&ensp;Added to BFS Path</td></tr>
+        </table>
+      </ul>
+    </div>
+    <div id="legend_edge" >
+      <ul class="legend">
+        <li>&#x200b</li>
+      </ul>
+    </div>
+    <div id="comments" class="comment-box">
+      <b>Observations</b><br>
+      <p id="ins">Select the source node from where you want to start the BFS Demo</p>
+    </div>
+    <center>
+    <div >
+      <p id="ranger">
+        Min.Speed <input type="range" min="100" max="2500" id="interval" class="slider_input" value="1500" onclick="change_interval();" onchange="change_interval();"> Max.Speed
+      </p>
+    </div>
+    </center>
+    <div class="buttons">
+      <input type="button" value="Reset" class="button-input" id="reset">
+      <input type="button" value="New graph" class="button-input" id="New_graph">
+      <input type="button" value="Start" class="button-input" id="pause">
+      <!-- <input type="button" value="Start" class="button-input" id="start"> -->
+    </div>
+    <script src="docs/static/libs/vis.min.js"></script>
+    <script src="js/Algo.js"></script> 
+    <script src="js/data.js"></script> 
+    <script src="js/bfs_demo.js"></script> 
+    <script src="../../assets/js/instruction-box.js"></script>
+    <script src="../../assets/js/iframeResize.js"></script></body>
+  </body>
+</html>
