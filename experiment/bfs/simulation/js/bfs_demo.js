@@ -334,9 +334,19 @@ function clicking() {
       bfs_demo.src +
       ' : ' +
       bfs_demo.seq
+
+    document.getElementById('pause').disabled = true
+    document.getElementById('pause').style.backgroundColor = 'grey'
+    document.getElementById('pause').style.cursor = 'not-allowed'
   }
 }
+
 function reset() {
+
+    document.getElementById('pause').disabled = false
+    document.getElementById('pause').style.backgroundColor = '288ec8'
+    document.getElementById('pause').style.cursor = 'pointer'
+
   for (i = 0; i < bfs_demo.res.length; i++) {
     resetedge(bfs_demo.res[i].id)
     resetnode(bfs_demo.res[i].node)
@@ -356,13 +366,14 @@ function reset() {
   resetnode(bfs_demo.src1)
   bfs_demo.src1 = 0
   clearInterval(bfs_demo.time)
-  document.getElementById('ins').innerHTML = 'Execution is reset, select the source node for BFS demo.'
+  document.getElementById('ins').innerHTML =
+    'Execution is reset, select the source node for BFS demo.'
   document.getElementById('interval').value = 1500
   //   document.getElementById('pause').disabled = true
-//   document.getElementById('pause').style.backgroundColor = 'grey'
-//   document.getElementById('reset').disabled = true
+  //   document.getElementById('pause').style.backgroundColor = 'grey'
+  //   document.getElementById('reset').disabled = true
   document.getElementById('reset').style.backgroundColor = 'grey'
-//   document.getElementById('reset').style.cursor = 'not-allowed'
+  //   document.getElementById('reset').style.cursor = 'not-allowed'
   //   document.getElementById('pause').style.cursor = 'not-allowed'
 }
 function start() {
@@ -395,8 +406,7 @@ function start() {
 function pause() {
   if (bfs_demo.start == 0) {
     start()
-  }
-  else if (bfs_demo.prev == -1) {
+  } else if (bfs_demo.prev == -1) {
     bfs_demo.prev = document.getElementById('interval').value
     if (bfs_demo.time != 0) {
       clearInterval(bfs_demo.time)
