@@ -344,7 +344,7 @@ function clicking() {
 function reset() {
 
     document.getElementById('pause').disabled = false
-    document.getElementById('pause').style.backgroundColor = '288ec8'
+    document.getElementById('pause').style.backgroundColor = '#288ec8'
     document.getElementById('pause').style.cursor = 'pointer'
 
   for (i = 0; i < bfs_demo.res.length; i++) {
