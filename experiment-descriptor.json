@@ -2,6 +2,12 @@
   "unit-type": "lu",
   "label": "Breadth First Search",
   "basedir": ".",
+  "LaTeXinMD": "true",
+  "code-assessment": {
+    "include": true,
+    "languages": ["javascript"],
+    "position": 7
+  },
   "units": [
     {
       "unit-type": "aim"
@@ -26,15 +32,15 @@
       "content-type": "video",
       "source": "graph-traversal.md",
       "target": "graph-traversal.html"
-    },  
+    },
     {
       "unit-type": "task",
       "label": "Basics of Queues",
       "content-type": "video",
       "source": "basics-of-queues.md",
       "target": "basics-of-queues.html"
-    },  
-    
+    },
+
     {
       "unit-type": "task",
       "label": "Pretest",
@@ -50,8 +56,8 @@
         {
           "unit-type": "aim"
         },
-        
-	{
+
+        {
           "unit-type": "task",
           "label": "Concept",
           "content-type": "video",
@@ -79,26 +85,25 @@
           "source": "simulation/bfs_practice.html",
           "target": "bfs_practice.html"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Exercise",
           "content-type": "simulation",
           "source": "simulation/bfs_exercise.html",
           "target": "bfs_exercise.html"
         },
-        
-	{
-         "unit-type": "task",
-         "label": "Quiz",
-         "content-type": "assesment",
-         "source": "bfs-quiz.json",
-         "target": "bfs-quiz.html"
-       }
-      
+
+        {
+          "unit-type": "task",
+          "label": "Quiz",
+          "content-type": "assesment",
+          "source": "bfs-quiz.json",
+          "target": "bfs-quiz.html"
+        }
       ]
     },
-    
-        {
+
+    {
       "unit-type": "lu",
       "label": "Analysis",
       "basedir": "analysis",
@@ -106,7 +111,7 @@
         {
           "unit-type": "aim"
         },
-	
+
         {
           "unit-type": "task",
           "label": "Time and Space Complexity ",
@@ -114,7 +119,7 @@
           "source": "time-and-space-complexity-of-bfs.md",
           "target": "time-and-space-complexity-of-bfs.html"
         },
-        
+
         {
           "unit-type": "task",
           "label": "Comparison with other Algorithms",
@@ -122,7 +127,7 @@
           "source": "comparison-with-other-algorithms.md",
           "target": "comparison-with-other-algorithms.html"
         },
-	
+
         {
           "unit-type": "task",
           "label": "Quiz",
@@ -132,7 +137,7 @@
         }
       ]
     },
-    
+
     {
       "unit-type": "task",
       "label": "Posttest",
@@ -140,7 +145,7 @@
       "source": "posttest.json",
       "target": "posttest.html"
     },
-       
+
     {
       "unit-type": "task",
       "label": "Further Readings/References",
