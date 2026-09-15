@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Consider the following graph:<br>Vertices, V = [a, b, c, d, e, f]<br>Edges, E = [[a, b], [a, c], [b, d], [b, e], [c, e], [c, f]]<br>Where each array within E signifies an edge between the two mentioned vertices.<br>How many queue-deletion iterations are required for BFS to completely traverse this graph when starting from vertex 'a' and marking each vertex as visited when it is first added to the queue?",
+      "answers": {
+        "a": "3",
+        "b": "5",
+        "c": "6",
+        "d": "7"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Three represents the number of levels in this graph, not the number of queue-deletion iterations required to process all six vertices.",
+        "b": "Incorrect. BFS processes every reachable vertex once in this traversal, so the number of processing iterations is not five.",
+        "c": "Correct. There are six vertices, and each vertex is removed from the queue and processed once, so six queue-deletion iterations are required.",
+        "d": "Incorrect. The traversal does not require seven vertex-processing iterations because the graph contains only six vertices."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. When comparing the auxiliary space requirements of BFS and DFS on a graph, under what condition can BFS require more space than DFS? Here, BFS space is associated with the maximum frontier size and DFS space with the maximum depth of the traversal.",
+      "answers": {
+        "a": "When the maximum depth is greater than the maximum frontier size",
+        "b": "When the maximum frontier size is greater than the maximum depth",
+        "c": "BFS always uses less space than DFS",
+        "d": "DFS always uses more space than BFS"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A larger traversal depth means the DFS traversal may require more space for its active path.",
+        "b": "Correct. When the BFS frontier contains more vertices than the number of vertices held along the DFS traversal path, BFS can require more auxiliary space.",
+        "c": "Incorrect. The relative space requirements depend on the structure of the graph.",
+        "d": "Incorrect. DFS does not always use more space; a graph with a wide frontier can make BFS use more space."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. What is the main reason BFS can be used to find shortest paths in an unweighted graph?",
+      "answers": {
+        "a": "BFS explores vertices in increasing order of their distance from the source",
+        "b": "BFS always selects the vertex with the smallest label",
+        "c": "BFS sorts all graph edges before traversal",
+        "d": "BFS visits all vertices at random"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. BFS explores the source first, then vertices one edge away, then two edges away, and so on, allowing the first discovery of a vertex to represent its shortest distance from the source.",
+        "b": "Incorrect. BFS does not determine its traversal order from the numerical or alphabetical labels of vertices.",
+        "c": "Incorrect. BFS does not require sorting all graph edges before beginning traversal.",
+        "d": "Incorrect. BFS follows a systematic level-by-level traversal rather than a random order."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which statement correctly describes the role of the queue in BFS?",
+      "answers": {
+        "a": "It stores vertices according to their numerical value",
+        "b": "It ensures that recently discovered vertices are always processed first",
+        "c": "It ensures that the earliest discovered vertex is processed first",
+        "d": "It stores only the vertices that have already been completely processed"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The queue order is determined by the order in which vertices are discovered, not by their labels.",
+        "b": "Incorrect. Processing the most recently discovered vertex first would correspond to LIFO behavior rather than FIFO behavior.",
+        "c": "Correct. A queue follows FIFO order, so a vertex that was discovered earlier is processed before vertices discovered later.",
+        "d": "Incorrect. The queue contains vertices that are waiting to be processed, rather than only vertices that have already been processed."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Consider a graph with $|V|$ vertices and $|E|$ edges represented by adjacency lists. What is the time complexity of BFS when all reachable vertices and their adjacency lists are processed?",
+      "answers": {
+        "a": "$O(|V| + |E|)$",
+        "b": "$O(|V|^2)$",
+        "c": "$O(|E|^2)$",
+        "d": "$O(|V| \\cdot |E|)$"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. BFS processes each reachable vertex and examines the edges represented in its adjacency list, resulting in $O(|V| + |E|)$ time.",
+        "b": "Incorrect. $O(|V|^2)$ is not the general adjacency-list complexity for BFS; it can arise for particular dense representations or graph sizes.",
+        "c": "Incorrect. BFS does not repeatedly process every edge against every other edge.",
+        "d": "Incorrect. BFS does not require a separate operation for every vertex-edge pair."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. A BFS implementation marks a vertex as visited only when it is removed from the queue instead of when it is first discovered. What problem can arise in a graph where multiple vertices have edges to the same unvisited vertex?",
+      "answers": {
+        "a": "The graph becomes disconnected",
+        "b": "The queue may contain the same vertex multiple times",
+        "c": "BFS automatically becomes DFS",
+        "d": "The number of vertices in the graph changes"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Delaying the visited marking does not remove edges or disconnect the graph.",
+        "b": "Correct. Multiple already-processed vertices may discover the same vertex before it is removed from the queue, causing duplicate queue entries.",
+        "c": "Incorrect. Changing when a vertex is marked visited does not by itself change the queue into a stack.",
+        "d": "Incorrect. The graph structure and its number of vertices remain unchanged."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "7. Consider an unweighted graph in which BFS assigns distance $0$ to the source vertex. If vertex $x$ receives distance $4$, what does this distance represent?",
+      "answers": {
+        "a": "The number of vertices in the graph",
+        "b": "The number of edges incident on $x$",
+        "c": "The number of BFS levels after $x$ is processed",
+        "d": "The number of edges in a shortest path from the source to $x$"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. A BFS distance is related to a particular source-to-vertex path, not to the total size of the graph.",
+        "b": "Incorrect. The distance of a vertex is not determined by its degree or the number of edges directly connected to it.",
+        "c": "Incorrect. The assigned distance indicates the vertex's level relative to the source rather than the number of levels remaining after processing it.",
+        "d": "Correct. A BFS distance of $4$ means that the shortest path from the source to $x$ contains four edges."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. In a BFS traversal of a connected graph, a vertex is placed in the queue when it is first discovered. Which statement about that vertex is correct?",
+      "answers": {
+        "a": "It must be processed immediately before its parent",
+        "b": "It will be processed before every vertex discovered at an earlier level",
+        "c": "It will eventually be removed from the queue and processed unless the traversal is terminated early",
+        "d": "It can never have an edge to another vertex at the same level"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The parent vertex is processed before its newly discovered child is placed into the queue.",
+        "b": "Incorrect. Vertices discovered at earlier BFS levels are processed before vertices at later levels.",
+        "c": "Correct. Once a reachable vertex is added to the queue, it remains there until it reaches the front and is processed, assuming the traversal runs to completion.",
+        "d": "Incorrect. In an undirected graph, vertices at the same BFS level can have edges between them."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. Consider an unweighted graph where two different paths from source $s$ to vertex $v$ contain 3 and 5 edges respectively. If BFS reaches $v$ through the path containing 3 edges first, what distance should BFS assign to $v$?",
+      "answers": {
+        "a": "3",
+        "b": "5",
+        "c": "8",
+        "d": "The distance cannot be determined"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. BFS explores an unweighted graph level by level, so the first discovery of $v$ occurs through a shortest path. Therefore, its distance from $s$ is $3$.",
+        "b": "Incorrect. A path containing five edges is longer than the path through which BFS first reaches the vertex.",
+        "c": "Incorrect. The lengths of two alternative paths are not added to determine the shortest-path distance.",
+        "d": "Incorrect. BFS provides the shortest-path distance from the source in an unweighted graph."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

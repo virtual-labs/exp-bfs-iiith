@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which of the following policies does a queue follow?",
+      "answers": {
+        "a": "FIFO - First In, First Out",
+        "b": "LIFO - Last In, First Out",
+        "c": "FILO - First In, Last Out",
+        "d": "Random order"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. A queue follows the FIFO policy, where the first element inserted into the queue is the first element removed.",
+        "b": "Incorrect. LIFO describes the order followed by a stack, where the most recently inserted element is removed first.",
+        "c": "Incorrect. FILO does not describe the standard order followed by a queue.",
+        "d": "Incorrect. A queue maintains a defined insertion and deletion order rather than removing elements randomly."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Which of the following best describes the main purpose of a standard graph traversal algorithm?",
+      "answers": {
+        "a": "Visiting all the edges of the graph",
+        "b": "Visiting the vertices of the graph in a systematic manner",
+        "c": "Detecting all the cycles in the graph",
+        "d": "Sorting all the vertices of the graph"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Traversal algorithms may examine edges while visiting vertices, but visiting every edge is not the general purpose of graph traversal.",
+        "b": "Correct. Graph traversal algorithms systematically visit vertices so that operations or computations can be performed on the graph.",
+        "c": "Incorrect. Cycle detection is one possible application of graph traversal, but it is not the general purpose of every traversal.",
+        "d": "Incorrect. Graph traversal does not inherently sort vertices."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Consider the following undirected graph:<br>Vertices, V = [1, 2, 3, 4, 5, 6]<br>Edges, E = [[1, 2], [1, 3], [2, 4], [2, 5], [3, 5], [3, 6]]<br>Where each array within E signifies an edge between the two mentioned vertices.<br>Which of the following best describes the above graph?",
+      "answers": {
+        "a": "Tree",
+        "b": "Cyclic graph",
+        "c": "Disconnected graph",
+        "d": "Complete graph"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A tree is an undirected connected graph with no cycles. The given graph contains a cycle involving vertices 2, 3, and 5.",
+        "b": "Correct. The edges [2, 5], [3, 5], and the path between 2 and 3 through the edge [2, 3] form a cycle involving vertices 2, 3, and 5.",
+        "c": "Incorrect. A graph is disconnected when at least one pair of vertices has no path between them. In this graph, all vertices are connected.",
+        "d": "Incorrect. A complete graph requires every pair of distinct vertices to have a direct edge, which is not the case here."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. Consider the following undirected graph:<br>Vertices, V = [a, b, c, d, e, f]<br>Edges, E = [[a, b], [a, c], [b, d], [b, e], [c, e], [c, f]]<br>Where each array within E signifies an edge between the two mentioned vertices.<br>If we store the vertices in a queue in top-to-bottom (parent-to-child) order and left-to-right order, where edges appearing earlier in the edge list are considered first, with 'a' as the root, at which index will vertex 'e' be stored? Assume 0-based indexing and no deletions from the queue.",
+      "answers": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Index 2 contains vertex 'c' in the queue ordering obtained from the given graph.",
+        "b": "Incorrect. Index 3 contains vertex 'd' in the queue ordering obtained from the given graph.",
+        "c": "Correct. The queue ordering is [a, b, c, d, e, f]. With 0-based indexing, 'e' is stored at index 4.",
+        "d": "Incorrect. Index 5 contains vertex 'f' in the queue ordering obtained from the given graph."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "5. In Breadth First Search (BFS), which data structure is primarily used to determine the order in which vertices are processed?",
+      "answers": {
+        "a": "Queue",
+        "b": "Stack",
+        "c": "Heap",
+        "d": "Binary search tree"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. BFS uses a queue so that vertices discovered earlier are processed before vertices discovered later.",
+        "b": "Incorrect. A stack follows LIFO order and is associated with the typical implementation of Depth First Search.",
+        "c": "Incorrect. A heap is not the data structure that determines the standard processing order in BFS.",
+        "d": "Incorrect. A binary search tree is not required to maintain the BFS processing order."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Starting from a source vertex, BFS visits vertices level by level. If a vertex is discovered for the first time, when is it normally marked as visited?",
+      "answers": {
+        "a": "Only after the entire graph has been traversed",
+        "b": "When the vertex is first discovered and added to the queue",
+        "c": "Only when the vertex is removed from the queue for the second time",
+        "d": "Only after all vertices at its level have been processed"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Delaying the visited marking until the end would not prevent repeated discoveries during traversal.",
+        "b": "Correct. Marking a vertex when it is first discovered and enqueued prevents the same vertex from being added to the queue multiple times.",
+        "c": "Incorrect. A vertex should not need to be removed from the queue multiple times during a standard BFS.",
+        "d": "Incorrect. Waiting until the entire level is processed can allow the same vertex to be discovered and enqueued more than once."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. For a graph represented using an adjacency list, what is the usual time complexity of BFS when all vertices reachable from the source are traversed?",
+      "answers": {
+        "a": "$O(|V|)$",
+        "b": "$O(|E|)$",
+        "c": "$O(|V| \\cdot |E|)$",
+        "d": "$O(|V| + |E|)$"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. BFS must also examine the edges associated with the vertices it visits.",
+        "b": "Incorrect. BFS processes vertices as well as examining their incident edges.",
+        "c": "Incorrect. The standard adjacency-list implementation does not require examining every possible vertex-edge combination.",
+        "d": "Correct. Each reachable vertex is processed and the relevant adjacency-list edges are examined, giving a time complexity of $O(|V| + |E|)$."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Suppose BFS starts from vertex A in an unweighted graph and reaches vertex B for the first time after traversing three edges. What does this first discovery tell us about the shortest distance from A to B?",
+      "answers": {
+        "a": "The shortest distance is exactly three edges",
+        "b": "The shortest distance must be greater than three edges",
+        "c": "The shortest distance must be less than three edges",
+        "d": "No information about the distance can be obtained from BFS"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. BFS explores an unweighted graph level by level, so the first time a vertex is reached, it is reached using a shortest path from the source.",
+        "b": "Incorrect. BFS does not first discover a vertex through a path longer than an available shorter path.",
+        "c": "Incorrect. If a shorter path existed, BFS would have reached the vertex at an earlier level.",
+        "d": "Incorrect. BFS traversal levels directly provide shortest-path distances from the source in an unweighted graph."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Consider a connected undirected graph with $|V|$ vertices. If BFS starts from one vertex and reaches every other vertex, how many edges will the BFS traversal tree contain?",
+      "answers": {
+        "a": "$|V|$",
+        "b": "$|V| - 1$",
+        "c": "$|V| + 1$",
+        "d": "$2|V|$"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A tree containing all $|V|$ vertices does not have the same number of edges as vertices.",
+        "b": "Correct. Every newly discovered vertex except the starting vertex is reached through one tree edge, resulting in $|V| - 1$ edges.",
+        "c": "Incorrect. A traversal tree does not contain more than the number of edges required to connect all its vertices without cycles.",
+        "d": "Incorrect. A BFS traversal tree requires only one parent edge for each vertex other than the starting vertex."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

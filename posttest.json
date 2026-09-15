@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which of the following is a use of the extra 'visited' array in BFS?",
+      "answers": {
+        "a": "To avoid repeatedly visiting vertices in a cycle",
+        "b": "To decide which vertex is at the front of the queue",
+        "c": "To sort the vertices before traversal",
+        "d": "To store the edges of the graph"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The visited array records whether a vertex has already been discovered, preventing it from being repeatedly added to the queue and helping BFS handle cycles.",
+        "b": "Incorrect. The queue determines which vertex is processed next according to FIFO order.",
+        "c": "Incorrect. The visited array records traversal state and does not sort vertices.",
+        "d": "Incorrect. The visited array stores information about whether vertices have been discovered; it does not store the graph's edges."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "2. What would happen if a stack were used instead of a queue to control the order of vertex processing in a standard graph traversal?",
+      "answers": {
+        "a": "The algorithm would simply traverse the graph from bottom to top",
+        "b": "The traversal would follow DFS-style depth-first behavior",
+        "c": "The graph could no longer be traversed",
+        "d": "There would be no change in the traversal order"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Replacing the queue with a stack changes the processing order to LIFO; it does not mean that the traversal literally proceeds from leaves to root.",
+        "b": "Correct. A stack processes the most recently discovered vertex first, causing the traversal to follow a depth-first pattern rather than BFS's level-by-level pattern.",
+        "c": "Incorrect. A stack can still be used to traverse a graph; it simply produces a different traversal strategy.",
+        "d": "Incorrect. A queue and a stack have different ordering policies, so replacing one with the other changes the traversal behavior."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. Why is the time complexity of BFS $O(|V| + |E|)$ when an adjacency-list representation is used?",
+      "answers": {
+        "a": "Because it processes each reachable vertex and examines the relevant edges",
+        "b": "Because it considers every possible pair of vertices",
+        "c": "Because BFS always visits every vertex and every edge even in a disconnected component",
+        "d": "Because BFS repeatedly sorts all vertices and edges"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. BFS processes each reachable vertex and examines the adjacency lists of those vertices. Across the traversal, this gives $O(|V| + |E|)$ time.",
+        "b": "Incorrect. Examining every possible pair of vertices would correspond to a different type of operation and is not required by standard adjacency-list BFS.",
+        "c": "Incorrect. A BFS starting from one source does not visit vertices or edges in disconnected components that are unreachable from that source.",
+        "d": "Incorrect. BFS does not repeatedly sort the vertices and edges during traversal."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. Consider the following graph:<br>Vertices, V = [a, b, c, d, e, f]<br>Edges, E = [[a, b], [a, c], [b, d], [b, e], [c, e], [c, f]]<br>Where each array within E signifies an edge between the two mentioned vertices and 'a' is the root.<br>Which of the following represents the correct sequence of the queue during BFS, assuming a vertex is marked visited when it is first added to the queue?",
+      "answers": {
+        "a": "[] → [a] → [b, c] → [b, e, f] → [b, e] → [b] → [d] → []",
+        "b": "[] → [a] → [a, b, c] → [a, b, c, d, e] → [a, b, c, d, e, f]",
+        "c": "[] → [a] → [b, c] → [c, d] → [d, e, f] → [e, f] → [f] → []",
+        "d": "[] → [a] → [b, c] → [c, d, e] → [d, e, f] → [e, f] → [f] → []"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. This sequence does not follow FIFO queue processing and removes vertices in an order inconsistent with BFS.",
+        "b": "Incorrect. A processed vertex is removed from the front of the queue, so the queue should not keep previously processed vertices indefinitely.",
+        "c": "Incorrect. When vertex 'b' is processed, its unvisited neighbors 'd' and 'e' must be added to the queue.",
+        "d": "Correct. Starting with [a], BFS processes 'a' and adds 'b' and 'c'; it then processes 'b' and adds 'd' and 'e', followed by processing 'c' and adding 'f'. The queue eventually becomes empty after all vertices are processed."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "5. In an unweighted graph, what does the BFS level of a vertex represent relative to the source vertex?",
+      "answers": {
+        "a": "The number of vertices in the graph",
+        "b": "The number of edges in a shortest path from the source to that vertex",
+        "c": "The number of edges incident to that vertex",
+        "d": "The position of the vertex in the adjacency list"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The BFS level of one vertex does not represent the total number of vertices in the graph.",
+        "b": "Correct. In an unweighted graph, the BFS level corresponds to the number of edges in a shortest path from the source to that vertex.",
+        "c": "Incorrect. The number of incident edges is the degree of the vertex and is unrelated to its BFS level.",
+        "d": "Incorrect. A vertex's BFS level is determined by its distance from the source, not by its position in an adjacency list."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Which of the following best explains why BFS processes a graph level by level?",
+      "answers": {
+        "a": "The queue processes vertices in FIFO order",
+        "b": "The queue processes vertices in LIFO order",
+        "c": "Vertices are always processed in alphabetical order",
+        "d": "All vertices are processed simultaneously"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Because BFS uses a FIFO queue, vertices discovered earlier are processed before vertices discovered later, resulting in level-by-level traversal.",
+        "b": "Incorrect. LIFO order is the behavior of a stack, not a queue.",
+        "c": "Incorrect. Alphabetical order is not a requirement of BFS.",
+        "d": "Incorrect. BFS processes one queue element at a time rather than processing all vertices simultaneously."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Suppose a connected graph contains $|V|$ vertices. During a BFS traversal starting from one source, each vertex other than the source is assigned exactly one BFS-tree parent. How many edges are present in the resulting BFS tree?",
+      "answers": {
+        "a": "$|V|$",
+        "b": "$|V| + 1$",
+        "c": "$|V| - 1$",
+        "d": "$2|V|$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The source has no parent edge in the BFS tree, so the number of tree edges is one less than the number of vertices.",
+        "b": "Incorrect. A tree connecting $|V|$ vertices without cycles cannot contain $|V| + 1$ edges.",
+        "c": "Correct. Every vertex except the source has exactly one parent, giving $|V| - 1$ parent edges.",
+        "d": "Incorrect. The BFS tree does not contain multiple parent edges for each vertex."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. If BFS is started from a vertex in a disconnected graph, what will happen?",
+      "answers": {
+        "a": "BFS will automatically create edges between disconnected components",
+        "b": "BFS will visit every vertex regardless of connectivity",
+        "c": "BFS will visit only the vertices reachable from the starting vertex",
+        "d": "BFS will always terminate before visiting the starting vertex"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. BFS traverses existing edges and does not create new connections between components.",
+        "b": "Incorrect. Vertices in components that are not reachable from the starting vertex cannot be reached by that single BFS traversal.",
+        "c": "Correct. A BFS starting at a particular vertex visits the connected component containing that vertex.",
+        "d": "Incorrect. The starting vertex is the first vertex from which the traversal begins."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. Consider two vertices $u$ and $v$ in an unweighted graph. BFS discovers $u$ at level 2 and discovers $v$ directly from $u$. Assuming $v$ has not been visited before, at which level will $v$ be placed?",
+      "answers": {
+        "a": "Level 1",
+        "b": "Level 2",
+        "c": "Level 4",
+        "d": "Level 3"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. A vertex reached through an edge from a level-2 vertex cannot be placed at an earlier level.",
+        "b": "Incorrect. Reaching a new vertex through one additional edge increases its distance from the source by one.",
+        "c": "Incorrect. The new vertex is reached through one edge from $u$, not through two additional edges.",
+        "d": "Correct. Since $u$ is at level 2 and $v$ is reached through one additional edge, $v$ is placed at level 3."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}
